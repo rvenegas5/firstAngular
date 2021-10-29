@@ -18,4 +18,5 @@ export class ProductComponent implements OnInit {
     this.addToCartClick.emit(this.product);
   }
 
+
 }
