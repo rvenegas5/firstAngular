@@ -18,4 +18,8 @@ export class CheckoutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onPickupOrDelivery(value: boolean): void {
+    console.log(value)
+  }
+
 }

@@ -1,6 +1,6 @@
 <div class="container">
   <form>
-    <mat-form-field>
+    <mat-form-field class="form__element">
       <input
         matInput
         placeholder="Name"
@@ -13,5 +13,21 @@
        Field invalid
       </mat-error>
     </mat-form-field>
+    <mat-radio-group class="form__element">
+      <p>Choose an option:</p>
+      <mat-radio-button
+      value="pickup"
+      (change)="onPickupOrDelivery(false)"
+      >
+        Pickup
+      </mat-radio-button
+      >
+      <mat-radio-button
+      value="delivery"
+      (change)="onPickupOrDelivery(true)"
+      >
+      Delivery
+      </mat-radio-button>
+    </mat-radio-group>
   </form>
 </div>
