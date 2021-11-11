@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header', // Nombre con el que podemos reutilizar el componente
@@ -6,5 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'] // Estilos del componente
 })
 export class HeaderComponent {
-  constructor() {};
+
+  constructor(private router: Router) {};
+
+  goToCheckOut(): void { // Para hacer la redireccion necesito el router del componente
+    this.router.navigate(['/checkout']);
+  }
 }
